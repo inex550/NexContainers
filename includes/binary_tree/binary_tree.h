@@ -18,21 +18,18 @@ namespace nex {
         };
 
         TreeNode(value_type value)
-                : left(nullptr),
-                    right(nullptr),
-                    parent(nullptr),
-                    value(value),
-                    color(Red) {
-            // Suppress unused warning/error
-            (void)(MORE_MEMORY_FOR_GOD_OF_MEMORY);
-        }
+                : left(nullptr)
+                , right(nullptr)
+                , parent(nullptr)
+                , value(value)
+                , color(Red) {}
 
         TreeNode(node_type* node)
-                : left(nullptr),
-                    right(nullptr),
-                    parent(nullptr),
-                    value(node->value),
-                    color(node->color) {}
+                : left(nullptr)
+                , right(nullptr)
+                , parent(nullptr)
+                , value(node->value)
+                , color(node->color) {}
 
         bool isRoot() { return parent == nullptr; }
 
